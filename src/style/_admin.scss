@@ -220,7 +220,6 @@ body {
   left: 200px;
   width: calc(100% - 200px);
   height: calc(100vh - 40px);
-  padding: 20px;
   background: $light; // 白天模式使用淺色背景
   color: $text-dark; // 白天模式使用深色文本
   overflow-y: auto;
@@ -239,6 +238,14 @@ body[data-bs-theme="dark"] {
     background: $main-bg-dark; // 使用自定義的主內容區背景色
     color: $text-light; // 使用淺色文本
   }
+}
+
+#iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 // 響應式設計
