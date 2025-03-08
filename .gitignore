@@ -1,0 +1,15 @@
+# IDE and Editor Settings
+.idea/
+.vscode/
+
+# Log files
+*.log
+
+# Node.js modules
+node_modules/
+
+# Build output
+public/
+
+# Cache output
+cache/

@@ -1,0 +1,4 @@
+{
+  "js": ["./node_modules/bootstrap/dist/js/bootstrap.bundle.js"],
+  "fonts": ["./node_modules/bootstrap-icons/font/fonts/bootstrap-icons.*"]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "adminify",
+  "version": "1.0.0",
+  "description": "A simple and flexible management system framework, customized based on Bootstrap, helps you quickly build a modern backend interface.",
+  "keywords": [
+    "gulp",
+    "builder",
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "author": "Harper Jang <harper.jang@outlook.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hizpark/adminify.git"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development gulp start",
+    "build": "NODE_ENV=production gulp build",
+    "tasks": "gulp --tasks"
+  },
+  "devDependencies": {
+    "art-template": "^4.13.2",
+    "browser-sync": "^2.29.3",
+    "fs-extra": "^11.1.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cached": "^1.1.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-remember": "^1.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-partials-imported": "^1.0.7",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "node-sass": "^9.0.0",
+    "plugin-error": "^2.0.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.1"
+  }
+}

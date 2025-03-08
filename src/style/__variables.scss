@@ -1,0 +1,43 @@
+$bootstrap-icons-font-dir: "../fonts";
+
+// 定義側欄和頂部工具欄的顏色
+$sidebar-bg: #2c3136; // 稍淺的暗色
+$toolbar-bg: #2c3136; // 稍淺的暗色
+$toolbar-active-bg: #3a3a3a;
+
+// 定義主內容區的顏色
+$main-bg-dark: #1e1e1e; // 稍深的暗色
+
+// 定義文本顏色
+$text-light: #ffffff; // 淺色文本
+$text-dark: #000000; // 深色文本
+
+// 定義 Bootstrap 的主題顏色
+$primary: #007bff; // 藍色
+$secondary: #6c757d; // 灰色
+$success: #28a745; // 綠色
+$info: #17a2b8; // 青色
+$warning: #ffc107; // 黃色
+$danger: #dc3545; // 紅色
+$light: #f8f9fa; // 淺灰色
+$dark: #343a40; // 深灰色
+
+// 定制字體
+$font-family-sans-serif: "Helvetica Neue", Arial, sans-serif;
+$font-size-base: 1rem; // 基礎字體大小
+
+// 定制間距
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+// 定制按鈕圓角
+$border-radius: 0.25rem;
+$border-radius-lg: 0.3rem;
+$border-radius-sm: 0.2rem;

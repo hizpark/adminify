@@ -1,0 +1,263 @@
+// 全局樣式
+body {
+  margin: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+// 側邊欄
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: $sidebar-bg; // 使用自定義的側欄背景色
+  color: $text-light; // 使用淺色文本
+  transition: width 0.3s ease;
+  overflow: hidden;
+  z-index: 1000;
+
+  // 收縮狀態
+  &.collapsed {
+    width: 80px;
+
+    .logo-container {
+      padding: 0 10px;
+    }
+
+    .nav {
+      // 收縮狀態下的 LOGO 鏈接隱藏
+      .logo-link {
+        opacity: 0;
+      }
+
+      // 收縮狀態下的導航菜單文字隱藏
+      .nav-link span {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+// LOGO 區域
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding: 0 26px;
+  height: 60px;
+  border-bottom: 1px solid rgba($text-light, 0.1); // 使用淺色文本
+  transition: padding 0.3s ease;
+
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: $text-light; // 使用淺色文本
+  }
+
+  .logo-link {
+    color: $text-light; // 使用淺色文本
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    min-width: 80px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+// 導航菜單
+.sidebar .nav {
+  padding: 0;
+
+  .nav-link {
+    color: $text-light; // 使用淺色文本
+    padding: 10px 26px;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba($text-light, 0.1); // 使用淺色文本
+    }
+
+    &.current {
+      background: rgba($text-light, 0.1); // 使用淺色文本
+    }
+
+    i {
+      margin-right: 10px;
+      color: $text-light; // 使用淺色文本
+    }
+
+    span {
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+  }
+}
+
+// 二級菜單
+.sub-menu {
+  padding-left: 30px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+
+  &.open {
+    max-height: 200px;
+  }
+
+  .nav-link {
+    padding: 8px 15px;
+
+    &:hover {
+      background: transparent;
+      color: $warning; // 使用警告色
+    }
+  }
+}
+
+// 工具欄
+.toolbar {
+  height: 40px;
+  position: fixed;
+  top: 0;
+  left: 200px;
+  width: calc(100% - 200px);
+  background: $toolbar-bg; // 使用自定義的工具欄背景色
+  color: $text-light; // 使用淺色文本
+  display: flex;
+  align-items: center;
+  z-index: 999;
+  transition: left 0.3s ease, width 0.3s ease;
+
+  .dropdown .btn.dropdown-toggle.show {
+    background: rgba($toolbar-active-bg, 1) !important;
+  }
+
+  // 調整工具欄內的下拉菜單位置
+  .dropdown-menu {
+    transform: none !important; // 禁用 Bootstrap 默認的 transform
+    top: 100% !important; // 將下拉菜單定位到按鈕的底部
+    background: rgba($toolbar-active-bg, 1) !important;
+    border: none;
+    border-radius: 0;
+
+    .dropdown-item {
+      color: rgba($text-light, 1) !important;
+      &:hover {
+        background: rgba($toolbar-bg, 1) !important;
+      }
+    }
+  }
+
+  // 收縮狀態下的工具欄位置調整
+  .sidebar.collapsed + & {
+    left: 80px;
+    width: calc(100% - 80px);
+  }
+}
+
+// 工具欄左側按鈕組
+.toolbar-left {
+  display: flex;
+  align-items: center;
+}
+
+// 工具欄按鈕和鏈接
+.toolbar .btn,
+.toolbar .site-link {
+  color: $text-light; // 使用淺色文本
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  text-decoration: none;
+
+  &:hover {
+    background: rgba($toolbar-active-bg, 1) !important;
+  }
+
+  &:not(:last-child) {
+    border-right: 1px solid rgba($text-light, 0.1); // 使用淺色文本
+  }
+}
+
+// 打開站點鏈接
+.toolbar .site-link {
+  width: auto;
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
+// 工具欄右側按鈕組
+.toolbar .btn-group {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+
+  .dropdown-toggle::after {
+    display: none;
+  }
+}
+
+// 主內容區
+.main {
+  position: fixed;
+  top: 40px;
+  left: 200px;
+  width: calc(100% - 200px);
+  height: calc(100vh - 40px);
+  padding: 20px;
+  background: $light; // 白天模式使用淺色背景
+  color: $text-dark; // 白天模式使用深色文本
+  overflow-y: auto;
+  transition: left 0.3s ease, width 0.3s ease;
+
+  // 收縮狀態下的主內容區位置調整
+  .sidebar.collapsed + .toolbar + & {
+    left: 80px;
+    width: calc(100% - 80px);
+  }
+}
+
+// 夜間模式
+body[data-bs-theme="dark"] {
+  .main {
+    background: $main-bg-dark; // 使用自定義的主內容區背景色
+    color: $text-light; // 使用淺色文本
+  }
+}
+
+// 響應式設計
+@include media-breakpoint-down(sm) {
+  .sidebar {
+    width: 80px;
+
+    &:not(.collapsed) {
+      width: 200px;
+    }
+  }
+
+  .sidebar.collapsed + .toolbar {
+    left: 80px;
+    width: calc(100% - 80px);
+  }
+
+  .sidebar:not(.collapsed) + .toolbar {
+    left: 200px;
+    width: calc(100% - 200px);
+  }
+}

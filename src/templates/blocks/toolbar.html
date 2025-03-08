@@ -1,0 +1,29 @@
+<!-- 工具欄 -->
+<nav id="toolbar" class="toolbar">
+    <!-- 左側按鈕組 -->
+    <div class="toolbar-left">
+        <button id="toggle-btn" class="btn" onclick="toggleSidebar()">☰</button>
+        <a href="https://www.example.com" class="site-link" target="_blank">查看站點</a>
+    </div>
+
+    <!-- 右側按鈕組 -->
+    <div class="btn-group">
+        <button class="btn btn-outline-light" onclick="toggleTheme()">🌙</button>
+        <div class="dropdown">
+            <button class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown">🌐</button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">中文</a></li>
+                <li><a class="dropdown-item" href="#">English</a></li>
+                <li><a class="dropdown-item" href="#">日本語</a></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown">👤</button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">個人資料</a></li>
+                <li><a class="dropdown-item" href="#">設置</a></li>
+                <li><a class="dropdown-item" href="#">登出</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

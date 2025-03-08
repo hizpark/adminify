@@ -1,0 +1,33 @@
+<!-- 左側導航欄 -->
+<div id="sidebar" class="sidebar d-flex flex-column">
+    <!-- LOGO 和鏈接 -->
+    <div class="logo-container">
+        <div class="logo">LOGO</div>
+    </div>
+
+    <!-- 導航菜單 -->
+    <nav class="nav flex-column">
+        <a href="#" class="nav-link" onclick="handleMenuClick()">
+            <i>🏠</i>
+            <span>儀表板</span>
+        </a>
+        <a href="#" class="nav-link current" onclick="handleMenuClick('file-menu')">
+            <i>📂</i>
+            <span>文件管理</span>
+        </a>
+        <div id="file-menu" class="sub-menu">
+            <a href="#" class="nav-link" onclick="handleMenuClick()">
+                <i>📄</i>
+                <span>文件列表</span>
+            </a>
+            <a href="#" class="nav-link" onclick="handleMenuClick()">
+                <i>📁</i>
+                <span>文件夾</span>
+            </a>
+        </div>
+        <a href="#" class="nav-link" onclick="handleMenuClick()">
+            <i>⚙</i>
+            <span>設定</span>
+        </a>
+    </nav>
+</div>

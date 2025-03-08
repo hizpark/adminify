@@ -1,0 +1,38 @@
+// 定制主題顏色映射
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+);
+
+// 定制背景顏色映射
+$background-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "sidebar": $sidebar-bg,
+  "toolbar": $toolbar-bg,
+  "main-dark": $main-bg-dark,
+);
+
+// 定制文本顏色映射
+$text-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $text-light,
+  "dark": $text-dark,
+);
